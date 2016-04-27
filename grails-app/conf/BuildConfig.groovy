@@ -36,8 +36,9 @@ grails.project.dependency.resolution = {
 	def seleniumVersion = "2.32.0"
 
 	dependencies {
-		compile("org.xhtmlrenderer:core-renderer:R8")
-		compile("com.lowagie:itext:2.1.0")
+		compile('org.xhtmlrenderer:flying-saucer-core:9.0.8')
+		compile('org.xhtmlrenderer:flying-saucer-pdf:9.0.8')
+		compile("com.lowagie:itext:2.1.7")
 		test("org.apache.pdfbox:pdfbox:1.0.0") {
 			exclude 'jempbox'
 			exported = false
@@ -45,7 +46,7 @@ grails.project.dependency.resolution = {
 		
 	}
 	plugins {
-		compile(":spring-events:1.0", ":tomcat:7.0.52.1", ":hibernate:3.6.10.14") {
+		compile(":spring-events:1.0", ":tomcat:7.0.55.3", ":hibernate:3.6.10.14") {
 			export = false
 		}
 		
